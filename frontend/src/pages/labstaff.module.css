@@ -1,0 +1,42 @@
+/* LabStaffPage.module.css */
+
+.labstaffpage {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f8ff; /* Light blue background */
+  }
+  
+  .searchstudent {
+    margin-bottom: 20px;
+  }
+  
+  .studentinfo {
+    margin-bottom: 20px;
+  }
+  
+  .infocontainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .studentphoto {
+    max-width: 100px; /* Adjust as needed */
+    max-height: 100px; /* Adjust as needed */
+    margin-right: 20px;
+  }
+  
+  .detailscontainer {
+    flex: 1;
+  }
+  
+  .labreports {
+    margin-bottom: 20px;
+  }
+  
+  .fileupload {
+    margin-top: 20px;
+  }
+  
+  /* Add more styles as needed */
+  
