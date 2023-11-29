@@ -1,0 +1,58 @@
+.patientinfopage {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f7ff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .patientheader {
+    display: flex;
+    align-items: center;
+  }
+  
+  .patientimage {
+    border-radius: 50%;
+    margin-right: 20px;
+    position: relative;
+    height: 150px;
+  }
+  
+  .patientdetails {
+    text-align: left;
+  }
+  
+  .patientsection {
+    margin-top: 20px;
+  }
+  
+  h1, h2 {
+    color: #111111;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  th, td {
+    border: 1px solid #fcf9f9;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:hover {
+    background-color: #d9edf7;
+  }
+  

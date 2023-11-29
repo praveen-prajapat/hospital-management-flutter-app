@@ -1,6 +1,6 @@
 // PharmacistPage.js
 import React, { useState } from 'react';
-import './pharmacy.css';
+import styles from './pharmacy.module.css';
 import { Link } from 'react-router-dom';
 import image from '../assets/student.png'
 
@@ -18,7 +18,7 @@ function StudentSearch({ onStudentSelect }) {
   };
 
   return (
-    <div className="student-search">
+    <div className={styles.studentsearch}>
       <label>Enter Roll Number:</label>
       <input
         type="text"
@@ -32,7 +32,7 @@ function StudentSearch({ onStudentSelect }) {
 
 function PrescriptionList({ prescriptions }) {
   return (
-    <div className="prescription-list">
+    <div className={styles.prescriptionlist}>
       <h3>Latest Prescriptions</h3>
       <ul>
         {prescriptions.map((medicine, index) => (
@@ -71,18 +71,18 @@ function StudentDetails({ student }) {
   };
 
   return (
-    <div className="student-details">
-      <div className="patient-info">
-        <div className="photo-container">
+    <div className={styles.studentdetails}>
+      <div className={styles.patientinfo} style={{width:'200px'}}>
+        <div className={styles.photocontainer}>
           <img src={image} alt={student.name} />
         </div>
-        <div className="details-container">
+        <div className={styles.detailscontainer}>
           <h2>{student.name}</h2>
           <p>Department: {student.department}</p>
         </div>
       </div>
 
-      <div className="medicine-info">
+      <div className={styles.medicineinfo}>
         <PrescriptionList prescriptions={prescriptions} />
 
         <h3>Add Medicine:</h3>
@@ -126,7 +126,7 @@ function Pharmacy() {
   };
 
   return (
-    <div className="pharmacist-page">
+    <div className={styles.pharmacistpage}>
       <h1>Pharmacist Page</h1>
       <StudentSearch onStudentSelect={handleStudentSelect} />
       {selectedStudent && <StudentDetails student={selectedStudent} />}
