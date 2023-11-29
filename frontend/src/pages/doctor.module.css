@@ -1,30 +1,30 @@
 /* DoctorPage.css */
-.doctor-page {
+.doctorpage {
     text-align: center;
   }
   
-  .doctor-details {
+  .doctordetails {
     background-color: #007bff;
     color: #fff;
     padding: 20px;
   }
   
-  .doctor-image {
+  .doctorimage {
     max-width: 200px;
     border-radius: 50%;
   }
   
-  .student-form {
+  .studentform {
     margin-top: 20px;
   }
   
-  .input-field {
+  .inputfield {
     margin: 10px;
     padding: 5px;
     width: 200px;
   }
   
-  .proceed-button {
+  .proceedbutton {
     background-color: #007bff;
     color: #fff;
     border: none;

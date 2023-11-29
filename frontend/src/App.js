@@ -6,6 +6,9 @@ import Receptionist from './pages/Receptionist';
 import Labstaff from './pages/Labstaff';
 import Pharmacy from './pages/Pharmacy';
 import Patient from './pages/Patient';
+import Studentinfo from './pages/Studentinfo';
+import DoctorReg from './pages/Doctorreg';
+import ForgotPass from './pages/ForgotPass'
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
           <Route path='/receptionist' element={<Receptionist/>} />
           <Route path='/labstaff' element={<Labstaff/>} />
           <Route path='/pharmacy' element={<Pharmacy/>} />
+          <Route path='/receptionist/studentinfo' element={<Studentinfo/>} />
+          <Route path='/register' element={<DoctorReg/>} />
+          <Route path='/forgot-password' element={<ForgotPass/>} />
           
         </Routes>
       </Router>

@@ -24,6 +24,7 @@ function LabStaff() {
       name: 'Praveen',
       photo: 'https://via.placeholder.com/150', // Replace with the actual URL of the student's photo
       branch: 'Electrical engineering',
+      roll: '22b3931',
     };
 
     setStudentInfo(studentData);
@@ -65,40 +66,43 @@ function LabStaff() {
             className={styles['studentphoto']}
           />
           <div className={styles['detailscontainer']}>
-            <h2>{studentInfo.name}'s Details</h2>
+            <h2>{studentInfo.name}</h2>
+            <p>Roll no: {studentInfo.roll}</p>
             <p>Branch: {studentInfo.branch}</p>
           </div>
         </div>
 
-        <div className={styles['labreports']}>
-          <h3>Lab Reports</h3>
-          <ul>
-            {labReports.map((report) => (
-              <li key={report}>
-                <label>
-                  <input
-                    type="checkbox"
-                    checked={selectedReports.includes(report)}
-                    onChange={() => handleReportCheckboxChange(report)}
-                  />
-                  {report}
-                </label>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <div className={styles.flexContainer}>
+      <div className={styles.labreports}>
+        <h3>Lab Reports</h3>
+        <ul>
+          {labReports.map((report) => (
+            <li key={report}>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={selectedReports.includes(report)}
+                  onChange={() => handleReportCheckboxChange(report)}
+                />
+                {report}
+              </label>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-        {selectedReports.length > 0 && (
-          <div className={styles['fileupload']}>
-            <h3>Upload Reports</h3>
-            <input
-              type="file"
-              accept=".pdf"
-              onChange={handleFileUpload}
-            />
-            {/* Add a submit button or further logic for file upload */}
-          </div>
-        )}
+      {selectedReports.length > 0 && (
+        <div className={styles.fileupload}>
+          <h3>Upload Reports</h3>
+          <input
+            type="file"
+            accept=".pdf"
+            onChange={handleFileUpload}
+          />
+          {/* Add a submit button or further logic for file upload */}
+        </div>
+      )}
+    </div>
       </div>
     )}
   </div>

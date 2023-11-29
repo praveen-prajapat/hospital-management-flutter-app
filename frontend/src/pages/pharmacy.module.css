@@ -2,14 +2,14 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f7ff; /* Light blue background color */
+    background-color: #bfd8f3; /* Light blue background color */
   }
   
-  .pharmacist-page {
+  .pharmacistpage {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    border: 1px solid #007bff; /* Blue border */
+    border: 1px solid #f3f6f9; /* Blue border */
     border-radius: 8px;
     background-color: #fff; /* White background */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -65,23 +65,23 @@ body {
   input:focus, button:focus {
     outline: 2px solid #0056b3; /* Darker blue focus outline */
   }
-  .student-details {
+  .studentdetails {
     display: flex;
     align-items: center;
   }
   
-  .photo-container {
+  .photocontainer {
     flex: 1;
     max-width: 50%; /* Adjust as needed */
     margin-right: 20px;
   }
   
-  .photo-container img {
+  .photocontainer img {
     max-width: 100%;
     height: auto;
   }
   
-  .details-container {
+  .detailscontainer {
     flex: 1;
   }
   

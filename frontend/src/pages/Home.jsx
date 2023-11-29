@@ -4,8 +4,6 @@ import logo from '../assets/iit-logo.png';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-
 
 const Home = () => {
   const navigate = useNavigate();
@@ -70,21 +68,21 @@ const Home = () => {
             <p className="lead fw-normal mb-0 me-3">Sign in as</p>
             <button type="button" className="btn btn-primary btn-floating mx-1">
               <p>Doctor</p>
-              <i className="fab fa-facebook-f"></i>
+              
             </button>
 
             <button type="button" className="btn btn-primary btn-floating mx-1">
-              <p>Receptionist</p>
-              <i className="fab fa-twitter"></i>
+              <p><Link style={{ textDecoration: 'none', color: 'white' }} to="/receptionist">Receptionist</Link></p>
+            
             </button>
 
             <button type="button" className="btn btn-primary btn-floating mx-1">
-              <p>Pharmacist</p>
-              <i className="fab fa-linkedin-in"></i>
+              <p><Link style={{ textDecoration: 'none', color: 'white' }} to="/pharmacy">Pharmacist</Link></p>
+           
             </button>
             <button type="button" className="btn btn-primary btn-floating mx-1">
-              <p>Labstaff</p>
-              <i className="fab fa-linkedin-in"></i>
+              <p><Link style={{ textDecoration: 'none', color: 'white' }} to="/labstaff">Labstaff</Link></p>
+            
             </button>
           </div>
           <div>
@@ -107,14 +105,13 @@ const Home = () => {
 
           <div className="d-flex justify-content-between align-items-center">
           
-            <a href="#!" className="text-body">Forgot password?</a>
+            <a href="#!" className="text-body"><Link style={{ textDecoration: 'none', color: 'black' }} to="/forgot-password">Forgot Password?</Link></a>
           </div>
 
           <div className="text-center text-lg-start mt-4 pt-2">
             <button  onClick={handleLogin} type="button" className="btn btn-primary btn-lg"
               style={{paddingLeft: '2.5rem', paddingRight: '2.5rem'}}>Login</button>
-            <p className="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
-                className="link-danger">Register</a></p>
+            <p className="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <br/><a><Link style={{ textDecoration: 'none', color: 'black' }} to="/register">Register</Link></a></p>
           </div>
 
         </form>
