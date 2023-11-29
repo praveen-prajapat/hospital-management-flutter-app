@@ -15,6 +15,7 @@ import 'package:project1/Student_info.dart';
 import 'package:project1/UrineReport.dart';
 import 'package:project1/UrineReportsList.dart';
 import 'package:project1/X-Ray%20Report.dart';
+import 'package:project1/XRayReportsList.dart';
 
 void main() {
   runApp(MyLabReports());
@@ -52,7 +53,7 @@ class MyHomePage extends StatelessWidget {
     Tile(
       name: 'X-Ray Test',
       imagePath: 'assets/x-ray.png',
-      destinationPage: MyXRayReport() ,
+      destinationPage: MyXRayReportList() ,
     ),
     Tile(
       name: 'Blood Test',
