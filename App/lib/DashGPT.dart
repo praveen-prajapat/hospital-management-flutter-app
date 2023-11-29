@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project1/DoctorsAvailabillity.dart';
 import 'package:project1/MedBook.dart';
+import 'package:project1/MedBook2.dart';
 import 'package:project1/MoreOptions.dart';
 import 'package:project1/Student_info.dart';
 import 'package:project1/login.dart';
@@ -33,7 +34,7 @@ class _MyDashboardState extends State<MyDash> {
             onPressed: () {
               // Navigate to the medical book page
               // You can implement this navigation logic here
-              Navigator.push(context, MaterialPageRoute(builder: (context) => MyMedBook()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => MyMedBook2()));
             },
           ),
           IconButton(
@@ -310,7 +311,7 @@ class MySideMenu extends StatelessWidget {
             title: Text('Medical Book'),
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => MyMedBook(),
+                builder: (context) => MyMedBook2(),
               ));
             },
           ),
@@ -328,7 +329,7 @@ class MySideMenu extends StatelessWidget {
             title: Text('Pharmacy'),
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => MyPharmacyPage(),
+                builder: (context) => MyPharmacy(),
               ));
             },
           ),

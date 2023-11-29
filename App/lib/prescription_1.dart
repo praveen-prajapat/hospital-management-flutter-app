@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
 import 'package:project1/MedBook.dart';
+import 'package:project1/MedBook2.dart';
 
 class MyPres1 extends StatefulWidget {
   const MyPres1({super.key});
@@ -37,7 +38,7 @@ class PrescriptionPage extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => MyMedBook()));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => MyMedBook2()));
           },
         ),
       ),

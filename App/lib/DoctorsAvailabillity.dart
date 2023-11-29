@@ -37,8 +37,8 @@ class DoctorListPage extends StatefulWidget {
 
 class _DoctorListPageState extends State<DoctorListPage> {
   List<Doctor> doctors = [
-    Doctor(name: 'Dr. John Doe', speciality: 'Cardiologist', imagePath: 'assets/doctor1.jpg', availability: 'Available today 2pm to 5pm'),
-    Doctor(name: 'Dr. Jane Smith', speciality: 'Pediatrician', imagePath: 'assets/doctor2.jpg', availability: 'Available today 9am to 12pm'),
+    Doctor(name: 'Dr. John Doe', speciality: 'Cardiologist', imagePath: 'assets/Doctor2.png', availability: 'Available today 2pm to 5pm'),
+    Doctor(name: 'Dr. Jane Smith', speciality: 'Pediatrician', imagePath: 'assets/Doctor1.png', availability: 'Available today 9am to 12pm'),
     // Add more doctors as needed
   ];
 

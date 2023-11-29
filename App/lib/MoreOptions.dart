@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:project1/Blank.dart';
 import 'package:project1/DashGPT.dart';
 import 'package:project1/Dashboard.dart';
+import 'package:project1/DoctorsAppointment.dart';
 import 'package:project1/DoctorsAvailabillity.dart';
 import 'package:project1/LabOrder.dart';
 import 'package:project1/LabReports.dart';
 import 'package:project1/MedBook.dart';
+import 'package:project1/MedBook2.dart';
 import 'package:project1/Student_info.dart';
+import 'package:project1/pharmacy.dart';
 
 void main() {
   runApp(MoreOptions());
@@ -38,7 +42,7 @@ class MyHomePage extends StatelessWidget {
     Tile(
       name: 'Medical Book',
       imagePath: 'assets/MedBook.png',
-      destinationPage: MyMedBook(),
+      destinationPage: MyMedBook2(),
     ),
     Tile(
       name: 'Student Information',
@@ -58,7 +62,7 @@ class MyHomePage extends StatelessWidget {
     Tile(
       name: 'Pharmacy',
       imagePath: 'assets/Pharmacy.png',
-      destinationPage: MyStudentInfo(),
+      destinationPage: MyPharmacy(),
     ),
     Tile(
       name: "Doctor's Availability",
@@ -68,8 +72,14 @@ class MyHomePage extends StatelessWidget {
     Tile(
       name: "Doctor's Appointment",
       imagePath: 'assets/Appointment.png',
-      destinationPage: MyStudentInfo(),
+      destinationPage: MyDoctorsAppointment(),
     ),
+    Tile(
+      name: "Reimbursement",
+      imagePath: 'assets/Reimburse.png',
+      destinationPage: MyBlankSpace(),
+    ),
+
 
     // Add more tiles as needed
   ];
