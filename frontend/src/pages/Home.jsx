@@ -10,35 +10,35 @@ const Home = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = async () => {
-    try {
-      const response = await fetch('http://127.0.0.1:8000/accounts/doctor/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          username: username,
-          password: password,
-        }),
-      });
-      if (response.ok) {
-        // If authentication is successful, parse and store user details
-        const doctor = await response.json();
+  const handleLogin =() => {
+    // try {
+    //   const response = await fetch('http://127.0.0.1:8000/accounts/doctor/', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({
+    //       username: username,
+    //       password: password,
+    //     }),
+    //   });
+    //   if (response.ok) {
+    //     // If authentication is successful, parse and store user details
+    //     const doctor = await response.json();
 
-        // Store user details (you can use state, context, or a state management library like Redux)
-        // For example, using localStorage for simplicity here
-        localStorage.setItem('user', JSON.stringify(doctor));
+    //     // Store user details (you can use state, context, or a state management library like Redux)
+    //     // For example, using localStorage for simplicity here
+    //     localStorage.setItem('user', JSON.stringify(doctor));
 
         // Redirect to UserDetailsPage
         navigate('/doctor');
-      } else {
-        // Handle authentication error
-        console.error('Authentication failed');
-      }
-    } catch (error) {
-      console.error('Error during login:', error);
-    }
+    //   } else {
+    //     // Handle authentication error
+    //     console.error('Authentication failed');
+    //   }
+    // } catch (error) {
+    //   console.error('Error during login:', error);
+    // }
   };
 
   return (
@@ -67,7 +67,7 @@ const Home = () => {
           <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
             <p className="lead fw-normal mb-0 me-3">Sign in as</p>
             <button type="button" className="btn btn-primary btn-floating mx-1">
-              <p>Doctor</p>
+              <p><Link style={{ textDecoration: 'none', color: 'white' }} to="/doctor">Doctor</Link></p>
               
             </button>
 

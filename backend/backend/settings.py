@@ -31,12 +31,15 @@ DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 # settings.py
-AUTH_USER_MODEL = 'accounts.CustomUser'
+# AUTH_USER_MODEL = 'accounts.CustomUser'
+AUTH_USER_MODEL = 'auth.user'
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    # 'django.contrib.admin',
+    'material',
+     'material.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -45,7 +48,8 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'corsheaders',
-    'accounts' 
+    # 'accounts', 
+  
 ]
 
 MIDDLEWARE = [

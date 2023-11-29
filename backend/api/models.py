@@ -2,10 +2,10 @@ from collections.abc import Iterable
 from django.db import models
 from datetime import date
 from django.contrib.auth.models import User
+# from accounts.models import CustomUser
 
 def default_date():
     return date.today()
-
 
 # Model for Students
 class Student(models.Model):
@@ -133,33 +133,33 @@ class MedicineInformation(models.Model):
         return self.quantity * self.price
     
 
-#doctor's details
-# class Doctor(models.Model):
-#     doctor_id = models.CharField(max_length=10, unique=True)
-#     #password = models.CharField(max_length=255) 
-#     name = models.CharField(max_length=255)
-#     image = models.ImageField(upload_to='doctors', null=True, blank=True)
-#     department = models.CharField(max_length=100,blank=True)
-#     doctor_user = models.ForeignKey(to=User, on_delete=models.CASCADE, null=True, related_name="user")
-#     def __str__(self):
-#         return self.doctor_id
-#     def save() -> None:
 
-#         return super().save()
+class Doctor(models.Model):
+    doctor_id = models.CharField(max_length=10, unique=True)
+    #password = models.CharField(max_length=255) 
+    name = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='doctors', null=True, blank=True)
+    department = models.CharField(max_length=100,blank=True)
+    doctor_user = models.ForeignKey(to=User, on_delete=models.CASCADE, null=True, related_name="user")
+    def __str__(self):
+        return self.doctor_id
+    def save() -> None:
 
-# class Availability(models.Model):
-#     doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
-#     day = models.CharField(max_length=15, choices=[
-#         ('Monday', 'Monday'),
-#         ('Tuesday', 'Tuesday'),
-#         ('Wednesday', 'Wednesday'),
-#         ('Thursday', 'Thursday'),
-#         ('Friday', 'Friday'),
-#         ('Saturday', 'Saturday'),
-#         ('Sunday', 'Sunday'),
-#     ])
-#     start_time = models.TimeField()
-#     end_time = models.TimeField()
+        return super().save()
+
+class Availability(models.Model):
+    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
+    day = models.CharField(max_length=15, choices=[
+        ('Monday', 'Monday'),
+        ('Tuesday', 'Tuesday'),
+        ('Wednesday', 'Wednesday'),
+        ('Thursday', 'Thursday'),
+        ('Friday', 'Friday'),
+        ('Saturday', 'Saturday'),
+        ('Sunday', 'Sunday'),
+    ])
+    start_time = models.TimeField()
+    end_time = models.TimeField()
 
 class LabStaff(models.Model):
     name = models.CharField(max_length=255)
@@ -178,6 +178,12 @@ class Pharmacist(models.Model):
     employee_id = models.CharField(max_length=20, unique=True)
     password = models.CharField(max_length=255)
     face_image = models.ImageField(upload_to='pharmacist')
+
+class Appointment(models.Model):
+    doctor_name = models.CharField(max_length=255)
+    booking_date = models.DateField()
+    appointment_date = models.DateField()
+    doctor_department = models.CharField(max_length=255)
 
 
  

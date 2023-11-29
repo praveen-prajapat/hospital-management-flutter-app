@@ -33,16 +33,16 @@ class MedicineInformationAdmin(admin.ModelAdmin):
     list_filter = ('pharmacy_details',)
     search_fields = ('pharmacy_details__medical_history__student__name', 'medicine_name')
 
-# @admin.register(Doctor)
-# class DoctorAdmin(admin.ModelAdmin):
-#     list_display = ('name', 'doctor_id')
-#     search_fields = ('name', 'doctor_id')
+@admin.register(Doctor)
+class DoctorAdmin(admin.ModelAdmin):
+    list_display = ('name', 'doctor_id')
+    search_fields = ('name', 'doctor_id')
 
-# @admin.register(Availability)
-# class AvailabilityAdmin(admin.ModelAdmin):
-#     list_display = ('doctor', 'day', 'start_time', 'end_time')
-#     list_filter = ('doctor', 'day')
-#     search_fields = ('doctor__doctor_id', 'day')
+@admin.register(Availability)
+class AvailabilityAdmin(admin.ModelAdmin):
+    list_display = ('doctor', 'day', 'start_time', 'end_time')
+    list_filter = ('doctor', 'day')
+    search_fields = ('doctor__doctor_id', 'day')
 
 @admin.register(LabStaff)
 class LabStaffAdmin(admin.ModelAdmin):
@@ -57,3 +57,8 @@ class ReceptionistAdmin(admin.ModelAdmin):
 class PharmacistAdmin(admin.ModelAdmin):
     list_display = ('name', 'employee_id')
     search_fields = ('name', 'employee_id')
+
+@admin.register(Appointment)
+class AppointmentAdmin(admin.ModelAdmin):
+    list_display = ('doctor_name', 'appointment_date')
+    search_fields = ('doctor_name', 'appointment_date')
